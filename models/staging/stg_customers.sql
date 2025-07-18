@@ -14,7 +14,7 @@ with source_data as (
         last_name,
         created_at,
         updated_at
-    from {{ ref('raw_customers') }}
+    from {{ ref('raw_customers') }} 
 ),
 
 cleaned as (
