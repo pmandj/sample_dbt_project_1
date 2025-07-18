@@ -9,4 +9,4 @@ select
     total_amount_dollars
 from {{ ref('stg_orders') }}
 where order_status_clean = 'completed'
-  and total_amount_dollars <= 0
+  and total_amount_dollars <= 0 

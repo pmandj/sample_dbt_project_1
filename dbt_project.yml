@@ -52,7 +52,7 @@ models:
 # Configuring snapshots
 snapshots:
   ecommerce_analytics:
-    +target_schema: snapshots
+    +target_schema: snapshots 
     +strategy: timestamp
     +updated_at: updated_at
 
