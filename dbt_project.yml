@@ -1,0 +1,102 @@
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'ecommerce_analytics'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'ecommerce_analytics'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+# Configuring models
+# Full documentation: https://docs.getdbt.com/reference/model-configs
+models:
+  ecommerce_analytics:
+    # Config indicated by + and applies to all files under models/staging/
+    staging:
+      +materialized: view
+      +docs:
+        node_color: "lightblue"
+    
+    # Config for intermediate models
+    intermediate:
+      +materialized: view
+      +docs:
+        node_color: "orange"
+    
+    # Config for mart models
+    marts:
+      +materialized: table
+      +docs:
+        node_color: "green"
+      
+      # Specific config for fact tables
+      +pre-hook: "{{ log('Building fact table: ' ~ this, info=true) }}"
+      +post-hook: "{{ log('Completed fact table: ' ~ this, info=true) }}"
+
+# Configuring snapshots
+snapshots:
+  ecommerce_analytics:
+    +target_schema: snapshots
+    +strategy: timestamp
+    +updated_at: updated_at
+
+# Configuring seeds
+seeds:
+  ecommerce_analytics:
+    +quote_columns: false
+    raw_customers:
+      +column_types:
+        customer_id: integer
+        email: varchar(255)
+        first_name: varchar(100)
+        last_name: varchar(100)
+        created_at: timestamp
+    raw_orders:
+      +column_types:
+        order_id: integer
+        customer_id: integer
+        order_date: date
+        status: varchar(50)
+        total_amount_cents: integer
+    raw_products:
+      +column_types:
+        product_id: integer
+        product_name: varchar(255)
+        category: varchar(100)
+        price_cents: integer
+    raw_order_items:
+      +column_types:
+        order_item_id: integer
+        order_id: integer
+        product_id: integer
+        quantity: integer
+        unit_price_cents: integer
+
+# Configuring tests
+tests:
+  ecommerce_analytics:
+    +store_failures: true
+    +severity: warn
+
+# Variables
+vars:
+  # The start date for incremental models
+  start_date: '2020-01-01'
+  # Currency conversion rates (example)
+  usd_to_eur: 0.85

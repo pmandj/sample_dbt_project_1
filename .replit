@@ -1,0 +1,41 @@
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "dbt-project"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "dbt_project_test"
+
+[[workflows.workflow]]
+name = "dbt-project"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install dbt-core dbt-duckdb && dbt deps && dbt seed && dbt run && dbt test && dbt docs generate && dbt docs serve --port 5000"
+waitForPort = 5000
+
+[[workflows.workflow]]
+name = "dbt_project_test"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pip install dbt-core dbt-duckdb dbt-postgres && dbt deps && dbt seed && dbt run && dbt test && dbt docs generate"
+
+[[ports]]
+localPort = 5000
+externalPort = 80

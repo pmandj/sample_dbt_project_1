@@ -1,0 +1,62 @@
+version: 2
+
+sources:
+  - name: main
+    description: "Raw data loaded from seed files"
+    tables:
+      - name: raw_customers
+        description: "Raw customer data"
+        columns:
+          - name: customer_id
+            description: "Unique customer identifier"
+            tests:
+              - unique
+              - not_null
+          - name: email
+            description: "Customer email address"
+            tests:
+              - unique
+              - not_null
+      
+      - name: raw_orders
+        description: "Raw order data"
+        columns:
+          - name: order_id
+            description: "Unique order identifier"
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            description: "Customer foreign key"
+            tests:
+              - not_null
+      
+      - name: raw_products
+        description: "Raw product data"
+        columns:
+          - name: product_id
+            description: "Unique product identifier"
+            tests:
+              - unique
+              - not_null
+          - name: product_name
+            description: "Product name"
+            tests:
+              - not_null
+      
+      - name: raw_order_items
+        description: "Raw order item data"
+        columns:
+          - name: order_item_id
+            description: "Unique order item identifier"
+            tests:
+              - unique
+              - not_null
+          - name: order_id
+            description: "Order foreign key"
+            tests:
+              - not_null
+          - name: product_id
+            description: "Product foreign key"
+            tests:
+              - not_null

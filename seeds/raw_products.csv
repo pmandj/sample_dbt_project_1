@@ -1,0 +1,13 @@
+product_id,product_name,category,price_cents,created_at,updated_at
+1,Wireless Headphones,Electronics,7500,2020-01-01 00:00:00,2020-01-01 00:00:00
+2,Running Shoes,Footwear,12000,2020-01-01 00:00:00,2020-01-01 00:00:00
+3,Coffee Maker,Kitchen,8500,2020-01-01 00:00:00,2020-01-01 00:00:00
+4,Laptop Stand,Electronics,4500,2020-01-01 00:00:00,2020-01-01 00:00:00
+5,Yoga Mat,Fitness,3000,2020-01-01 00:00:00,2020-01-01 00:00:00
+6,Smartphone Case,Electronics,2500,2020-01-01 00:00:00,2020-01-01 00:00:00
+7,Desk Lamp,Home Office,6000,2020-01-01 00:00:00,2020-01-01 00:00:00
+8,Water Bottle,Fitness,2000,2020-01-01 00:00:00,2020-01-01 00:00:00
+9,Bluetooth Speaker,Electronics,9500,2020-01-01 00:00:00,2020-01-01 00:00:00
+10,Cooking Pan,Kitchen,5500,2020-01-01 00:00:00,2020-01-01 00:00:00
+11,Gaming Mouse,Electronics,6500,2020-01-01 00:00:00,2020-01-01 00:00:00
+12,Workout Gloves,Fitness,1500,2020-01-01 00:00:00,2020-01-01 00:00:00

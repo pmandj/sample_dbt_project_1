@@ -1,0 +1,11 @@
+customer_id,email,first_name,last_name,created_at,updated_at
+1,john.doe@email.com,John,Doe,2020-01-15 10:30:00,2020-01-15 10:30:00
+2,jane.smith@email.com,Jane,Smith,2020-02-20 14:45:00,2020-02-20 14:45:00
+3,mike.johnson@email.com,Mike,Johnson,2020-03-10 09:15:00,2020-03-10 09:15:00
+4,sarah.williams@email.com,Sarah,Williams,2020-04-05 16:20:00,2020-04-05 16:20:00
+5,david.brown@email.com,David,Brown,2020-05-12 11:00:00,2020-05-12 11:00:00
+6,lisa.davis@email.com,Lisa,Davis,2020-06-18 13:30:00,2020-06-18 13:30:00
+7,robert.miller@email.com,Robert,Miller,2020-07-22 15:45:00,2020-07-22 15:45:00
+8,jennifer.wilson@email.com,Jennifer,Wilson,2020-08-30 08:20:00,2020-08-30 08:20:00
+9,james.moore@email.com,James,Moore,2020-09-14 12:10:00,2020-09-14 12:10:00
+10,mary.taylor@email.com,Mary,Taylor,2020-10-08 17:25:00,2020-10-08 17:25:00

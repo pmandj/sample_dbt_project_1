@@ -1,0 +1,22 @@
+ecommerce_analytics:
+  outputs:
+    dev:
+      type: duckdb
+      path: 'ecommerce_analytics.duckdb'
+      threads: 4
+      keepalives_idle: 0
+      search_path: main
+    
+    prod:
+      type: postgres
+      host: "{{ env_var('PGHOST', 'localhost') }}"
+      user: "{{ env_var('PGUSER', 'postgres') }}"
+      password: "{{ env_var('PGPASSWORD', 'password') }}"
+      port: "{{ env_var('PGPORT', 5432) | as_number }}"
+      dbname: "{{ env_var('PGDATABASE', 'ecommerce') }}"
+      schema: analytics
+      threads: 4
+      keepalives_idle: 0
+      search_path: public
+      
+  target: dev
