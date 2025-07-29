@@ -1,0 +1,7 @@
+supplier_id,supplier_name,contact_email,phone_number,address,city,state,country,rating,contract_start_date
+101,Tech Supplies Co,contact@techsupplies.com,555-0101,123 Tech St,New York,NY,USA,4.5,2023-01-01
+102,Global Electronics,sales@globalelec.com,555-0102,456 Circuit Ave,Los Angeles,CA,USA,4.2,2023-02-15
+103,Premium Goods Ltd,info@premiumgoods.com,555-0103,789 Quality Blvd,Chicago,IL,USA,4.8,2023-03-01
+104,Quick Supply Inc,orders@quicksupply.com,555-0104,321 Fast Lane,Houston,TX,USA,3.9,2023-04-10
+105,Reliable Parts Co,contact@reliableparts.com,555-0105,654 Dependable Dr,Phoenix,AZ,USA,4.3,2023-05-20
+106,Innovative Solutions,hello@innovativesol.com,555-0106,987 Creative Way,Seattle,WA,USA,4.6,2023-06-15

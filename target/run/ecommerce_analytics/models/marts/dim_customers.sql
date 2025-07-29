@@ -72,7 +72,7 @@ final as (
         -- Data quality
         current_timestamp as last_updated
         
-    from customer_history
+    from customer_history 
 )
 
 select * from final

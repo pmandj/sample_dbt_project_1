@@ -11,7 +11,7 @@ with source_data as (
         last_name,
         created_at,
         updated_at
-    from "ecommerce_analytics"."main"."raw_customers"
+    from "ecommerce_analytics"."main"."raw_customers" 
 ),
 
 cleaned as (

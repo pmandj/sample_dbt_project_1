@@ -60,3 +60,65 @@ sources:
             description: "Product foreign key"
             tests:
               - not_null
+      
+      - name: raw_payments
+        description: "Payment transaction data"
+        columns:
+          - name: payment_id
+            description: "Unique payment identifier"
+            tests:
+              - unique
+              - not_null
+          - name: order_id
+            description: "Order foreign key"
+            tests:
+              - not_null
+      
+      - name: raw_inventory
+        description: "Product inventory and warehouse data"
+        columns:
+          - name: inventory_id
+            description: "Unique inventory record identifier"
+            tests:
+              - unique
+              - not_null
+          - name: product_id
+            description: "Product foreign key"
+            tests:
+              - not_null
+      
+      - name: raw_suppliers
+        description: "Supplier information and contracts"
+        columns:
+          - name: supplier_id
+            description: "Unique supplier identifier"
+            tests:
+              - unique
+              - not_null
+      
+      - name: raw_customer_segments
+        description: "Customer segmentation and marketing data"
+        columns:
+          - name: customer_id
+            description: "Customer foreign key"
+            tests:
+              - unique
+              - not_null
+      
+      - name: raw_marketing_campaigns
+        description: "Marketing campaign performance data"
+        columns:
+          - name: campaign_id
+            description: "Unique campaign identifier"
+            tests:
+              - unique
+              - not_null
+      
+      - name: raw_returns
+        description: "Product return and refund data"
+        columns:
+          - name: return_id
+            description: "Unique return identifier"
+            tests:
+              - unique
+              - not_null

@@ -1,0 +1,11 @@
+payment_id,order_id,payment_method,payment_status,amount_cents,currency_code,processed_at,gateway_fee_cents,created_at
+1,1,credit_card,completed,2499,USD,2024-01-15 10:30:00,75,2024-01-15 10:15:00
+2,2,paypal,completed,1999,USD,2024-01-15 11:45:00,60,2024-01-15 11:30:00
+3,3,credit_card,failed,3499,USD,2024-01-16 09:20:00,0,2024-01-16 09:15:00
+4,4,bank_transfer,pending,899,USD,2024-01-16 14:10:00,25,2024-01-16 14:00:00
+5,5,credit_card,completed,1299,USD,2024-01-17 16:30:00,40,2024-01-17 16:25:00
+6,6,paypal,completed,2199,USD,2024-01-18 12:15:00,65,2024-01-18 12:10:00
+7,7,credit_card,completed,999,USD,2024-01-19 15:45:00,30,2024-01-19 15:40:00
+8,8,apple_pay,completed,3299,USD,2024-01-20 11:20:00,100,2024-01-20 11:15:00
+9,9,credit_card,refunded,1799,USD,2024-01-21 13:30:00,55,2024-01-21 13:25:00
+10,10,paypal,completed,2999,USD,2024-01-22 10:00:00,90,2024-01-22 09:55:00

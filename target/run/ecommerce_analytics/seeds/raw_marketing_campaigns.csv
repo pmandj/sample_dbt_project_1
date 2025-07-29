@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "ecommerce_analytics"."main"."raw_marketing_campaigns";
+    -- dbt seed --
+    
+          COPY "ecommerce_analytics"."main"."raw_marketing_campaigns" FROM '/home/runner/workspace/seeds/raw_marketing_campaigns.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  
