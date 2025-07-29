@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains a comprehensive dbt (data build tool) project for e-commerce analytics. The system transforms raw transactional data into clean, business-ready datasets using modern data engineering practices. The project includes 10+ models, custom tests, macros, snapshots, and mixed documentation coverage as requested.
+This repository contains a highly complex dbt (data build tool) project for e-commerce analytics demonstrating enterprise-level data transformation patterns. The system transforms raw transactional data into clean, business-ready datasets using modern data engineering practices. The project includes 30+ models, comprehensive sources, extensive testing, and intentional inconsistencies in column definitions to showcase real-world data challenges.
 
 ## User Preferences
 
@@ -22,23 +22,23 @@ Preferred communication style: Simple, everyday language.
 - **Documentation**: Auto-generated dbt docs with selective coverage
 
 ### Data Pipeline
-- **Source Data**: CSV seed files (customers, orders, products, order_items)
-- **Staging Layer**: 4 models for data cleaning and validation
-- **Intermediate Layer**: 2 models for business logic and enrichment
-- **Marts Layer**: 4 models (2 dimensions, 2 facts) for analytics
+- **Source Data**: 10 CSV seed files (customers, orders, products, order_items, payments, inventory, suppliers, customer_segments, marketing_campaigns, returns)
+- **Staging Layer**: 10 models for data cleaning and validation with intentional column inconsistencies
+- **Intermediate Layer**: 7 models for business logic and enrichment across multiple domains
+- **Marts Layer**: 13 models (5 dimensions, 5 facts, 3 aggregations) for comprehensive analytics
 - **Snapshots**: Slowly changing dimensions tracking
 - **Macros**: 3 reusable SQL functions
 
 ## Key Components
 
 ### Core dbt Components
-- **Seeds**: 4 CSV files containing sample e-commerce data
-- **Staging Models**: 4 SQL models for data cleaning and validation
-- **Intermediate Models**: 2 SQL models for business logic and enrichment
-- **Marts Models**: 4 SQL models (dimensions and facts) for analytics
+- **Seeds**: 10 CSV files containing comprehensive e-commerce data across multiple business domains
+- **Staging Models**: 10 SQL models for data cleaning and validation with intentional column naming inconsistencies
+- **Intermediate Models**: 7 SQL models for business logic and enrichment across payments, inventory, marketing, and returns
+- **Marts Models**: 13 SQL models (5 dimensions, 5 facts, 3 aggregations) for comprehensive analytics
 - **Snapshots**: 1 snapshot for tracking customer changes over time
 - **Macros**: 3 reusable SQL functions (cents_to_dollars, safe_divide, generate_schema_name)
-- **Tests**: 71 total tests (68 built-in + 3 custom singular tests)
+- **Tests**: 99 total tests (96 built-in + 7 custom singular tests) with intentional warnings
 - **Analyses**: 2 SQL files for business insights and reporting
 
 ### Directory Structure
@@ -64,7 +64,7 @@ Preferred communication style: Simple, everyday language.
    - **Staging**: Raw data cleaning and standardization
    - **Intermediate**: Business logic application and data enrichment
    - **Marts**: Final dimensional models for analytics
-3. **Data Quality**: Comprehensive testing with 71 tests (68 built-in + 3 custom)
+3. **Data Quality**: Comprehensive testing with 99 tests (96 built-in + 7 custom) including intentional inconsistency detection
 4. **Documentation**: Auto-generated interactive documentation via dbt docs
 
 ## External Dependencies
@@ -110,4 +110,4 @@ Preferred communication style: Simple, everyday language.
 - This project uses DuckDB for local development with persistent file storage
 - The database file `ecommerce_analytics.duckdb` maintains state between dbt runs
 - Mixed documentation approach: some models documented, others intentionally left undocumented
-- All 71 tests pass with 1 intentional warning for data quality demonstration
+- All 99 tests pass with 3 intentional warnings demonstrating data quality challenges and column definition inconsistencies across models

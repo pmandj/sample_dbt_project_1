@@ -63,3 +63,43 @@ models:
         tests:
           - accepted_values:
               values: ['Active', 'Dormant', 'Inactive']
+
+  - name: int_payment_summary
+    description: "Payment summary by order with status aggregation"
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_inventory_metrics
+    description: "Product inventory metrics with supplier information"
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_customer_marketing
+    description: "Customer marketing data with segment analysis"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_campaign_performance
+    description: "Marketing campaign performance analysis"
+    columns:
+      - name: campaign_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_return_analysis
+    description: "Return analysis with product and order information"
+    columns:
+      - name: return_id
+        tests:
+          - unique
+          - not_null

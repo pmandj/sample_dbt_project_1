@@ -39,3 +39,4 @@ args = "pip install dbt-core dbt-duckdb dbt-postgres && dbt deps && dbt seed && 
 [[ports]]
 localPort = 5000
 externalPort = 80
+exposeLocalhost = true
