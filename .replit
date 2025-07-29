@@ -19,6 +19,10 @@ args = "dbt-project"
 task = "workflow.run"
 args = "dbt_project_test"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "dbt-docs-server"
+
 [[workflows.workflow]]
 name = "dbt-project"
 author = "agent"
@@ -36,7 +40,15 @@ author = "agent"
 task = "shell.exec"
 args = "pip install dbt-core dbt-duckdb dbt-postgres && dbt deps && dbt seed && dbt run && dbt test && dbt docs generate"
 
+[[workflows.workflow]]
+name = "dbt-docs-server"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd target && python -m http.server 5000"
+waitForPort = 5000
+
 [[ports]]
 localPort = 5000
 externalPort = 80
-exposeLocalhost = true
