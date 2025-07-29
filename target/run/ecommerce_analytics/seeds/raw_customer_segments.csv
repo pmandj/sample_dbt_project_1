@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "ecommerce_analytics"."main"."raw_customer_segments";
+    -- dbt seed --
+    
+          COPY "ecommerce_analytics"."main"."raw_customer_segments" FROM '/home/runner/workspace/seeds/raw_customer_segments.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

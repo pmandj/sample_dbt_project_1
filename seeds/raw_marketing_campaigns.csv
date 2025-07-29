@@ -1,0 +1,6 @@
+campaign_id,campaign_name,channel,start_date,end_date,budget_dollars,spend_dollars,impressions,clicks,conversions,target_audience
+1,Winter Sale 2024,email,2024-01-01,2024-01-31,5000,4750,50000,2500,125,all_customers
+2,New Year Promo,social_media,2024-01-01,2024-01-15,3000,2890,75000,3200,180,young_adults
+3,Product Launch - Headphones,paid_search,2024-01-10,2024-01-25,8000,7650,120000,4800,240,tech_enthusiasts
+4,Valentine's Day,email,2024-02-01,2024-02-14,2500,2400,30000,1500,85,couples
+5,Flash Sale Weekend,social_media,2024-01-20,2024-01-22,1500,1450,40000,2000,110,bargain_hunters

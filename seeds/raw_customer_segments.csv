@@ -1,0 +1,11 @@
+customer_id,segment,acquisition_channel,lifetime_value_tier,risk_score,last_engagement_date,preferred_communication
+1,premium,organic_search,high,low,2024-01-22,email
+2,standard,social_media,medium,medium,2024-01-20,sms
+3,premium,referral,high,low,2024-01-21,email
+4,budget,paid_ads,low,high,2024-01-18,email
+5,standard,organic_search,medium,low,2024-01-19,phone
+6,premium,direct,high,low,2024-01-22,email
+7,budget,social_media,low,medium,2024-01-17,sms
+8,premium,referral,high,low,2024-01-23,email
+9,standard,paid_ads,medium,medium,2024-01-16,email
+10,budget,organic_search,low,high,2024-01-15,sms
